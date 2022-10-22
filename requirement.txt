@@ -1,0 +1,2 @@
+graphviz
+pydotplus==2.0.2
