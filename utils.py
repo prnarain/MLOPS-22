@@ -61,6 +61,7 @@ def h_param_tuning(h_param_comb, clf, x_train, y_train, x_dev, y_dev, metric):
     best_metric = -1.0
     best_model = None
     best_h_params = None
+    accuracy_list = [] 
     # 2. For every combination-of-hyper-parameter values
     for cur_h_params in h_param_comb:
 
@@ -87,6 +88,16 @@ def h_param_tuning(h_param_comb, clf, x_train, y_train, x_dev, y_dev, metric):
             best_h_params = cur_h_params
             print("Found new best metric with :" + str(cur_h_params))
             print("New best val metric:" + str(cur_metric))
+    
+         #4 accurcy list  
+        accuracy_list.append(cur_metric)
+
+    import statistics
+    print("Mean accuracy", statistics.mean(accuracy_list))
+    print("Median accuracy", statistics.median(accuracy_list))
+    print("Min accuracy", min(accuracy_list))
+    print("Max accuracy", max(accuracy_list))
+
     return best_model, best_metric, best_h_params
 
 
