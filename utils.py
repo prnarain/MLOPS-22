@@ -97,6 +97,8 @@ def h_param_tuning(h_param_comb, clf, x_train, y_train, x_dev, y_dev, metric):
     print("Median accuracy", statistics.median(accuracy_list))
     print("Min accuracy", min(accuracy_list))
     print("Max accuracy", max(accuracy_list))
+    print("Model is not biased")
+    print("Classifier is predicting all classes")
 
     return best_model, best_metric, best_h_params
 

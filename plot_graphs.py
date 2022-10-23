@@ -32,6 +32,13 @@ params["C"] = c_list
 
 h_param_comb = get_all_h_param_comb(params)
 
+''' 
+dec_params = {}
+max_depth_list = [10,20,30,40,50]
+dec_params = get_all_h_param_comb_dec(dec_params)
+dec_params["max_depth"] = max_depth_list 
+dec_h_param_comb = get_all_h_param_comb_dec(dec_params)
+''' 
 
 # PART: load dataset -- data from csv, tsv, jsonl, pickle
 digits = datasets.load_digits()

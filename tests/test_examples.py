@@ -14,3 +14,10 @@ def test_equal():
     assert 1==1
 
 
+def test3():
+    assert 1==1
+
+
+def test4():
+    assert 1==1
+
